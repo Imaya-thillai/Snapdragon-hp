@@ -1,0 +1,17 @@
+[
+    {
+        "scheme_name": "PM-Kisan Samman Nidhi",
+        "description": "A central sector scheme to provide income support of Rs. 6000 per year to all landholding farmer families.",
+        "official_url": "pmkisan.gov.in"
+    },
+    {
+        "scheme_name": "Ayushman Bharat PM-JAY",
+        "description": "Provides health coverage of up to Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization.",
+        "official_url": "pmjay.gov.in"
+    },
+    {
+        "scheme_name": "Sukanya Samriddhi Yojana",
+        "description": "A small deposit scheme for the girl child launched as a part of the Beti Bachao Beti Padhao campaign.",
+        "official_url": "nsiindia.gov.in"
+    }
+]

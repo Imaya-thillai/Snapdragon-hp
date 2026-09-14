@@ -1,0 +1,17 @@
+[
+    {
+        "pattern_name": "Digital Arrest",
+        "description": "Scammers pose as law enforcement or customs officials, claiming the victim's Aadhaar or phone number is linked to illegal activities, and demand money to resolve the issue.",
+        "keywords": ["CBI", "Customs", "digital arrest", "Aadhaar block", "FedEx", "narcotics"]
+    },
+    {
+        "pattern_name": "Fake KYC Update",
+        "description": "Messages warning that a bank account or SIM card will be blocked unless a KYC link is clicked.",
+        "keywords": ["KYC", "account suspended", "block", "update immediately", "Dear customer"]
+    },
+    {
+        "pattern_name": "WhatsApp Job Fraud",
+        "description": "Offers for easy part-time jobs like liking YouTube videos or Google reviews, leading to a prepaid task scam.",
+        "keywords": ["part time job", "YouTube likes", "daily income", "HR manager"]
+    }
+]
