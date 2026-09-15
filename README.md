@@ -69,6 +69,7 @@ Snapdragon-hp/
 ├── filecore/                   # File Security Engine (Sibling module)
 └── README.md                   # Project documentation
 ```
+<img width="1297" height="670" alt="image" src="https://github.com/user-attachments/assets/ccee1abc-f82b-4791-9925-75fa339396f2" />
 
 ---
 
