@@ -10,7 +10,7 @@ Built for the Hedera Hackathon, **Project Turtle** solves the connectivity probl
 *   **Theme 3: Sustainability:** Incentivizes and cryptographically verifies regenerative actions.
 
 ---
-![Uploading image.png…]()
+
 
 ## 🏗️ Architecture & Flowchart
 
