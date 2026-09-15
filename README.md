@@ -1,17 +1,20 @@
-# SatyaShield AI
+# Project Turtle 🐢
 
-An **offline-only**, on-device assistant designed for Snapdragon-powered PCs. It empowers everyday Indian users to detect scams (via messages or calls) and understand government documents without sacrificing privacy, running entirely without an internet connection.
+An **offline-first**, AI-driven sustainability agent network integrating the **Hedera DLT** with **Snapdragon NPU** edge processing. 
+
+Built for the Hedera Hackathon, Project Turtle solves the connectivity problem in ecological data collection. It empowers environmental workers (tree planters, ocean cleanup crews) in remote, offline areas to verify their ecological impact using local AI. Once connected to the internet, the autonomous agent syncs with the Hedera network to log immutable proofs and issue tokenized micro-rewards (DeFi).
+
+## Hackathon Themes Addressed
+1. **Theme 1: AI & Agents** - An autonomous background agent manages the queue and handles Hedera interactions.
+2. **Theme 2: DeFi & Tokenization** - Ecological actions are tokenized into micro-rewards upon consensus.
+3. **Theme 3: Sustainability** - Incentivizes and cryptographically verifies regenerative actions.
 
 ## Architecture
-* **Frontend:** React + Tauri (Voice-first, accessible UI)
+* **Frontend:** React + Tauri (Offline-capable desktop/web shell)
 * **Backend:** Local FastAPI server
-* **Inference:** ONNX Runtime with the **Qualcomm Neural Network (QNN) Execution Provider**.
-* **Vector Store:** ChromaDB (local persistence).
-
-## Features
-1. **Check a Message:** OCR + LLM vs known scam text patterns.
-2. **Check a Call:** Whisper ASR + LLM vs known scam scripts.
-3. **Check a Document:** OCR + RAG vs genuine government scheme database.
+* **Offline AI (Snapdragon):** ONNX Runtime (QNN Execution Provider) for on-device computer vision verification.
+* **Agent Integration:** Python-based autonomous agent syncing offline queues to Hedera via simulated HCS and Token Services.
 
 ## Setup Instructions
-*(Coming Soon - Full local build instructions)*
+1. Run `python backend/main.py` to start the offline AI and Hedera Agent.
+2. Run `cd frontend && npm run dev` to start the UI.
