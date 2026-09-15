@@ -34,6 +34,7 @@ ACTION_REGISTRY = {
     "rename_file":        {"risk": RiskLevel.MEDIUM,   "confirm": True},
     "overwrite_file":     {"risk": RiskLevel.HIGH,     "confirm": True},
     "change_permissions": {"risk": RiskLevel.CRITICAL, "confirm": True},
+    "run_powershell":     {"risk": RiskLevel.CRITICAL, "confirm": True},
 }
 
 # Prompt injection guard: file content must never be treated as an instruction
@@ -119,6 +120,15 @@ def _execute_action(action: str, target: str, extra: dict) -> dict:
             new_path = os.path.join(folder, new_name)
             os.rename(target, new_path)
             return {"status": "success", "message": f"Renamed to: {new_path}"}
+            
+        elif action == "run_powershell":
+            import subprocess
+            cmd = extra.get("cmd", "Get-ChildItem")
+            folder = target if os.path.isdir(target) else os.path.dirname(target)
+            # Open a visible PowerShell window on the user's desktop!
+            ps_cmd = f'start powershell -NoExit -Command "Write-Host \'FileCore Executing in: {folder}\' -ForegroundColor Green; Set-Location -LiteralPath \'{folder}\'; {cmd}"'
+            subprocess.Popen(ps_cmd, shell=True)
+            return {"status": "success", "message": f"Launched PowerShell at {folder}"}
 
         else:
             return {"status": "success", "message": f"Action '{action}' acknowledged."}

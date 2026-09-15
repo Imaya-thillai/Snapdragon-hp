@@ -8,7 +8,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from fastapi import FastAPI, UploadFile, File, Form, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 import uvicorn
+import json
 
 from filecore.db.database import init_db, get_all_files, get_audit_log
 from filecore.core.indexer import index_directory, find_duplicates
@@ -31,9 +34,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+# Serve the static ui directory if it exists
+ui_dir = os.path.join(os.path.dirname(__file__), "ui")
+if os.path.exists(ui_dir):
+    app.mount("/static", StaticFiles(directory=ui_dir), name="static")
+
+@app.get("/", response_class=HTMLResponse)
 def root():
-    return {"project": "FileCore", "status": "running", "mode": "OFFLINE / LOCAL"}
+    html_path = os.path.join(ui_dir, "index.html")
+    if os.path.exists(html_path):
+        with open(html_path, "r", encoding="utf-8") as f:
+            return f.read()
+    return "<h1>FileCore UI missing</h1><p>Expected index.html in filecore/ui</p>"
 
 @app.get("/api/status")
 def status():
@@ -99,8 +111,8 @@ async def api_summarize(file: UploadFile = File(...)):
 
 @app.post("/api/action")
 def api_action(action: str = Form(...), target: str = Form(...),
-               confirmed: bool = Form(False)):
-    return request_action(action, target, confirmed)
+               confirmed: bool = Form(False), cmd: str = Form("")):
+    return request_action(action, target, confirmed, extra={"cmd": cmd})
 
 @app.get("/api/audit")
 def api_audit(limit: int = 50):
