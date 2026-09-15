@@ -1,0 +1,23 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+chromadb
+langchain
+langchain-community
+sentence-transformers
+onnxruntime
+rich
+typer
+watchdog
+sqlite-utils
+PyMuPDF
+python-docx
+python-magic-bin; sys_platform == "win32"
+pillow
+pypdf
+pystray
+Pillow
+cryptography
+schedule
+pywin32; sys_platform == "win32"

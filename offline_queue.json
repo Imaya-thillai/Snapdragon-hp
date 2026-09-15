@@ -1,0 +1,64 @@
+[
+    {
+        "claim_type": "tree_planting",
+        "filename": "test.jpg",
+        "ai_confidence": 0.94,
+        "ai_analysis": "AI Vision: Detected healthy sapling and freshly turned soil.",
+        "timestamp": "2026-09-15T20:17:45.919387",
+        "status": "synced",
+        "id": "claim_1_1789483665",
+        "hedera_tx_id": "0.0.1001@1789483707.0000",
+        "tokens_minted": 5
+    },
+    {
+        "claim_type": "tree_planting",
+        "filename": "images.jpg",
+        "ai_confidence": 0.94,
+        "ai_analysis": "AI Vision: Detected healthy sapling and freshly turned soil.",
+        "timestamp": "2026-09-15T20:18:36.608480",
+        "status": "synced",
+        "id": "claim_2_1789483716",
+        "hedera_tx_id": "0.0.1001@1789483722.0000",
+        "tokens_minted": 5
+    },
+    {
+        "claim_type": "ocean_cleanup",
+        "filename": "Screenshot 2026-09-15 195233.png",
+        "ai_confidence": 0.88,
+        "ai_analysis": "AI Vision: Detected collected plastic waste in standard cleanup bags.",
+        "timestamp": "2026-09-15T20:18:51.969129",
+        "status": "synced",
+        "id": "claim_3_1789483731",
+        "hedera_tx_id": "0.0.1001@1789483740.0000",
+        "tokens_minted": 5
+    },
+    {
+        "claim_type": "tree_planting",
+        "filename": "images.jpg",
+        "ai_confidence": 0.94,
+        "ai_analysis": "AI Vision: Detected healthy sapling and freshly turned soil.",
+        "timestamp": "2026-09-15T20:19:17.657862",
+        "status": "synced",
+        "id": "claim_4_1789483757",
+        "hedera_tx_id": "0.0.1001@1789483785.0000",
+        "tokens_minted": 5
+    },
+    {
+        "claim_type": "tree_planting",
+        "filename": "images.jpg",
+        "ai_confidence": 0.94,
+        "ai_analysis": "AI Vision: Detected healthy sapling and freshly turned soil.",
+        "timestamp": "2026-09-15T20:33:37.412628",
+        "status": "pending_sync",
+        "id": "claim_5_1789484617"
+    },
+    {
+        "claim_type": "ocean_cleanup",
+        "filename": "WhatsApp Image 2026-09-14 at 11.16.59 AM.jpeg",
+        "ai_confidence": 0.88,
+        "ai_analysis": "AI Vision: Detected collected plastic waste in standard cleanup bags.",
+        "timestamp": "2026-09-15T20:33:45.781058",
+        "status": "pending_sync",
+        "id": "claim_6_1789484625"
+    }
+]
